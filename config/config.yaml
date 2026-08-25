@@ -131,15 +131,45 @@ rss:
       name: "Hacker News"
       url: "https://hnrss.org/frontpage"
 
-    - id: "ruanyifeng"
-      name: "阮一峰的网络日志"
-      url: "http://www.ruanyifeng.com/blog/atom.xml"
-      enabled: false                  # 禁用
-      # max_age_days: 3               # 示例：推送 3 天内的文章（更新较慢的博客）
+    # Google Trends 美国
+    - id: "google-trends-us"
+      name: "Google Trends US"
+      url: "https://trends.google.com/trending/rss?geo=US"
+      max_age_days: 1
      
     - id: "yahoo-finance"
       name: "雅虎财经"
       url: "https://finance.yahoo.com/news/rssindex"
+
+          # Reddit 全站热门
+    - id: "reddit-popular"
+      name: "Reddit Popular"
+      url: "https://www.reddit.com/r/popular/.rss"
+      max_age_days: 1
+
+          # Reddit 世界新闻
+    - id: "reddit-worldnews"
+      name: "Reddit World News"
+      url: "https://www.reddit.com/r/worldnews/hot/.rss"
+      max_age_days: 1
+
+          # Reddit AI
+    - id: "reddit-artificial"
+      name: "Reddit Artificial Intelligence"
+      url: "https://www.reddit.com/r/artificial/hot/.rss"
+      max_age_days: 1
+
+          # Google News 全球新闻
+    - id: "google-news-world"
+      name: "Google News World"
+      url: "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en"
+      max_age_days: 1
+
+          # BBC 综合新闻
+    - id: "bbc-news"
+      name: "BBC News"
+      url: "https://feeds.bbci.co.uk/news/rss.xml"
+      max_age_days: 1
 
     # 自定义源示例
     # - id: "custom-feed"
