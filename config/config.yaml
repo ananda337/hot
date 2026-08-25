@@ -99,6 +99,17 @@ platforms:
     - id: "zhihu"
       name: "知乎"
       expected_domain: "zhihu.com"
+          - id: "36kr"
+      name: "36氪快讯"
+      expected_domain: "36kr.com"
+
+    - id: "juejin"
+      name: "掘金热榜"
+      expected_domain: "juejin.cn"
+
+    - id: "xueqiu"
+      name: "雪球热帖"
+      expected_domain: "xueqiu.com"
 
 
 
@@ -169,6 +180,38 @@ rss:
     - id: "bbc-news"
       name: "BBC News"
       url: "https://feeds.bbci.co.uk/news/rss.xml"
+      max_age_days: 1
+
+          # ================================
+    # 虎嗅（NewsNow 无此源，走 RSSHub）
+    # ================================
+
+    - id: "huxiu-article"
+      name: "虎嗅首页文章"
+      url: "https://rsshub.app/huxiu/article"
+      enabled: true
+      max_age_days: 1
+
+    - id: "huxiu-channel-tmt"
+      name: "虎嗅科技频道"
+      url: "https://rsshub.app/huxiu/channel/tmt"
+      enabled: true
+      max_age_days: 1
+
+    # ================================
+    # 第一财经（NewsNow 无此源，走 RSSHub）
+    # ================================
+
+    - id: "yicai-latest"
+      name: "第一财经最新"
+      url: "https://rsshub.app/yicai/latest"
+      enabled: true
+      max_age_days: 1
+
+    - id: "yicai-news"
+      name: "第一财经资讯"
+      url: "https://rsshub.app/yicai/news"
+      enabled: true
       max_age_days: 1
 
     # 自定义源示例
