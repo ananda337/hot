@@ -72,9 +72,7 @@ platforms:
     - id: "baidu"
       name: "百度热搜"
       expected_domain: "baidu.com"
-    - id: "wallstreetcn-hot"
-      name: "华尔街见闻"
-      expected_domain: "wallstreetcn.com"
+
     - id: "thepaper"
       name: "澎湃新闻"
       expected_domain: "thepaper.cn"
@@ -104,7 +102,15 @@ platforms:
     - id: "xueqiu"
       name: "雪球热帖"
       expected_domain: "xueqiu.com"
-
+    - id: "zaobao"
+      name: "联合早报"
+      expected_domain: "zaochenbao.com"   # 注意：返回链接是第三方镜像站，不是 zaobao.com
+    - id: "cankaoxiaoxi"
+      name: "参考消息"
+      expected_domain: "ckxx.net"         # 返回链接是 ckxxapp.ckxx.net，不是 cankaoxiaoxi.com
+    - id: "kaopu"
+      name: "靠谱新闻"
+      expected_domain: "kaopu.news"
 
 
 # ===============================================================
@@ -132,51 +138,10 @@ rss:
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
-    - id: "hacker-news"
-      name: "Hacker News"
-      url: "https://hnrss.org/frontpage"
 
-    # Google Trends 美国
-    - id: "google-trends-us"
-      name: "Google Trends US"
-      url: "https://trends.google.com/trending/rss?geo=US"
-      max_age_days: 1
-     
-    - id: "yahoo-finance"
-      name: "雅虎财经"
-      url: "https://finance.yahoo.com/news/rssindex"
 
-          # Reddit 全站热门
-    - id: "reddit-popular"
-      name: "Reddit Popular"
-      url: "https://www.reddit.com/r/popular/.rss"
-      max_age_days: 1
 
-          # Reddit 世界新闻
-    - id: "reddit-worldnews"
-      name: "Reddit World News"
-      url: "https://www.reddit.com/r/worldnews/hot/.rss"
-      max_age_days: 1
-
-          # Reddit AI
-    - id: "reddit-artificial"
-      name: "Reddit Artificial Intelligence"
-      url: "https://www.reddit.com/r/artificial/hot/.rss"
-      max_age_days: 1
-
-          # Google News 全球新闻
-    - id: "google-news-world"
-      name: "Google News World"
-      url: "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en"
-      max_age_days: 1
-
-          # BBC 综合新闻
-    - id: "bbc-news"
-      name: "BBC News"
-      url: "https://feeds.bbci.co.uk/news/rss.xml"
-      max_age_days: 1
-
-          # ================================
+     # ================================
     # 虎嗅（NewsNow 无此源，走 RSSHub）
     # ================================
 
@@ -207,6 +172,14 @@ rss:
       url: "https://rsshub.app/yicai/news"
       enabled: true
       max_age_days: 1
+
+    - id: "nyt-chinese"
+      name: "纽约时报中文网"
+      url: "https://cn.nytimes.com/rss/"
+
+    - id: "bbc-chinese"
+      name: "BBC 中文网"
+      url: "https://feeds.bbci.co.uk/zhongwen/simp/rss.xml"
 
     # 自定义源示例
     # - id: "custom-feed"
